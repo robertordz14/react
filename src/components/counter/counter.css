@@ -1,0 +1,12 @@
+button{
+    color: rgb(248, 246, 246);
+    background-color: #dc143c;
+    border-radius: 15px;
+    border-color: white;
+    width: 100px;
+    height: 30px;
+}
+.limite{
+    color: red;
+    font-size: 20px;
+}
