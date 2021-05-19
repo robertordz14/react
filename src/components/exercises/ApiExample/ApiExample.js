@@ -8,7 +8,7 @@ const BASE_API = "https://pokeapi.co/api/v2/";
 
 const PokeApi = () => {
   const [data, setData] = useState(null);
-  const [filter, setFilter] = useState("");
+  const [filter, setFilter] = useState("pikachu");
   const [pokemon, setPokemon] = useState();
   const [shiny, setShinyPokemon] = useState(false);
   const [back, setBackPokemon] = useState(false);
