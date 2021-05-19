@@ -6,6 +6,7 @@ import { excercisesEnum } from '../../utils/constants';
 import './Excercises.css';
 import ToDoList from './ToDoList/ToDoList';
 import ApiExample from './ApiExample/ApiExample';
+import ApiDos from './ApiExample/ApiDos'
 
 const Excercises = () => {
   const { url } = useRouteMatch();
@@ -15,6 +16,8 @@ const Excercises = () => {
       { title: 'Counter', id: excercisesEnum.COUNTER, path: `${url}/counter` },
       { title: 'Task list', id: excercisesEnum.TASK_LIST, path: `${url}/taskList` },
       { title: 'Pokemon', id: excercisesEnum.POKEMON, path: `${url}/pokemon` },
+      { title: 'Pokemon2', id: excercisesEnum.POKEMON, path: `${url}/pokemon2` },
+
     ]
   }, [url]);
 
@@ -36,6 +39,10 @@ const Excercises = () => {
 
           <Route path={`${url}/pokemon`}>
             <ApiExample />
+          </Route>
+
+          <Route path={`${url}/pokemon2`}>
+            <ApiDos />
           </Route>
         </Switch>
       </main>
