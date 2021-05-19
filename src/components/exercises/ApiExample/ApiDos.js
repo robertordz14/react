@@ -2,10 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./ApiExample.css";
 import axios from "axios";
 
-
 const PokeApi = () => {
-
-
   //FORMA DOS
   const [pokemon2, setPokemon2] = useState("pikachu");
   const [pokemonData, setPokemonData] = useState([]);
@@ -27,15 +24,15 @@ const PokeApi = () => {
       setPokemonData(toArray);
     } catch (err) {
       console.log(err);
-      alert("Numero o nombre invalido")
+      alert("Numero o nombre invalido");
     }
   };
   console.log(pokemonData);
 
   return (
     <div className="App">
-    <p>Forma 2</p>
-    <p>Ingresa el numero o nombre y presiona ENTER para buscar</p>
+      <p>Forma 2</p>
+      <p>Ingresa el numero o nombre y presiona ENTER para buscar</p>
       <form onSubmit={handleSubmit}>
         <label>
           <input
@@ -46,21 +43,17 @@ const PokeApi = () => {
           />
         </label>
       </form>
-
       {pokemonData.map((data) => {
         return (
           <div className="container">
             <h2>{data.name.toUpperCase()}</h2>
-            <img className="ImgPoke"
-            src={data.sprites["front_default"]} />
+            <img className="ImgPoke" src={data.sprites["front_default"]} />
             <p>ID: {data.id}</p>
           </div>
         );
       })}
     </div>
-  );  
+  );
 };
-
-
 
 export default PokeApi;
