@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './counter.css';
+import PropTypes from 'prop-types';
+import './Counter.css';
 
 function Counter(props) {
   const [count, setCount] = useState(0);
@@ -8,7 +9,10 @@ function Counter(props) {
     if (count < props.maxValue) {
       setCount(prevCount => prevCount + 1);
     }
-    props.sayHi();
+
+    if (props.sayHi) {
+      props.sayHi();
+    }
   }
 
   useEffect(() => {
@@ -16,7 +20,7 @@ function Counter(props) {
 
     return () => {
       console.log('cleanup');
-    }
+    };
   });
 
   useEffect(() => {
@@ -24,7 +28,7 @@ function Counter(props) {
 
     return () => {
       console.log('run cleanup');
-    }
+    };
   }, [count]);
 
   useEffect(() => {
@@ -32,21 +36,35 @@ function Counter(props) {
 
     return () => {
       console.log('will unmount');
-    }
-  }, [])
+    };
+  }, []);
 
   return (
-    <div>
+    <div className="Counter">
       <h1>{count}</h1>
-      <button onClick={handleClick}>Click here</button>
+
+      <button
+        className="Button"
+        onClick={handleClick}
+      >
+        Click here
+      </button>
+
       {count === props.maxValue
-        ? <span className="limite">You reach the limit</span>
+        ? <span className="Counter-error">You reach the limit</span>
         : null
       }
+
       <p>The max value is {props.maxValue}</p>
+
       {props.children}
     </div>
   );
+}
+
+Counter.propTypes = {
+  sayHi: PropTypes.func,
+  maxValue: PropTypes.number.isRequired
 }
 
 export default Counter;

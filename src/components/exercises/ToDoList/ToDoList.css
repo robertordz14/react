@@ -1,0 +1,14 @@
+.Task {
+  border: 1pt solid lightgray;
+}
+.Task-done {
+  color: green;
+}
+.Task-false {
+  color: red;
+}
+.BtnList {
+  border-radius: 10px;
+  background-color: yellowgreen;
+  color: black;
+}

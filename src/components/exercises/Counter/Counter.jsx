@@ -28,6 +28,7 @@ class Counter extends React.Component {
         count: prevState.count + 1
       }));
     }
+    // this.props.sayHi();
   }
 
   render() {
@@ -42,7 +43,7 @@ class Counter extends React.Component {
         <p>The max value is {this.props.maxValue}</p>
         {this.props.children}
       </div>
-    )
+    );
   }
 }
 

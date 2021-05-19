@@ -1,0 +1,41 @@
+.Info {
+  text-align: center;
+  padding-top: 50px;
+}
+.Title {
+  font-family: monospace;
+}
+.Btn {
+  color: #fff !important;
+  font-size: 10px;
+  padding: 0.5em 1.2em;
+  background: rgb(42, 165, 128);
+  border: 2px solid;
+  border-radius: 10px;
+  border-color: #acaa31;
+  position: relative;
+}
+.Btn:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.301);
+  transition: all 1s ease;
+}
+.Btn:hover:before {
+  width: 100%;
+}
+.Search {
+  border-radius: 10px;
+  background-color: tomato;
+  color: white;
+}
+.ImgPoke {
+  background-color: rgb(229, 226, 226);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}

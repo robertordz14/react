@@ -1,0 +1,23 @@
+.Counter {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.Counter-error {
+  color: #c91010;
+}
+
+.Button {
+  background-color: #ee0202;
+  border-radius: 4px;
+  border: 1pt solid #080808;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.Button:hover {
+  opacity: 0.9;
+}
